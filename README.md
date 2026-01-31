@@ -38,7 +38,7 @@
 <h2 align="center">💻 TECH ARSENAL & EXPLOITS 💻</h2>
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,vue,angular,nodejs,python,java,php,mongodb,mysql,figma,photoshop,linux,git&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,react,nextjs,vue,nodejs,python,java,php,mongodb,mysql,figma,photoshop,linux,git&theme=dark" />
 </div>
 
 <br>
