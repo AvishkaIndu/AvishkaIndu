@@ -76,12 +76,12 @@
     <tspan x="20" dy="1.2em">    *@##*##+++%++#++#+*#**#######*++*####+*****##++***##*######**##%****###*+#@%#+</tspan>
   </text>
 
-  <!-- Center-Aligned Creative ID Card Layout with Adjusted Spacing (Moved to 560px) -->
-  <g transform="translate(560, 110)">
+  <!-- Center-Aligned Creative ID Card Layout - Y position moved down to 145 -->
+  <g transform="translate(560, 145)">
     
     <!-- Futuristic UI Accents -->
     <path d="M -25 10 L -25 -15 L 0 -15" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
-    <!-- Bottom bracket extended further right for the longer university name -->
+    <!-- Bottom bracket -->
     <path d="M 390 200 L 390 225 L 365 225" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
     <line x1="-25" y1="15" x2="-25" y2="195" stroke="#388bfd" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 4" />
 
