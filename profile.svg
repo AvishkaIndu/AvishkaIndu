@@ -1,11 +1,19 @@
 <svg width="950" height="420" viewBox="0 0 950 420" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg { fill: #0d1117; }
+    
+    /* ASCII Breathing Animation */
     .ascii {
       font-family: 'Courier New', Courier, monospace;
       font-size: 11px;
-      fill: #c9d1d9;
+      animation: breath 3s ease-in-out infinite alternate;
     }
+    @keyframes breath {
+      0% { opacity: 0.6; fill: #388bfd; }
+      100% { opacity: 1; fill: #79c0ff; }
+    }
+
+    /* Details Styling */
     .details {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 15px;
@@ -13,6 +21,24 @@
     }
     .title { fill: #58a6ff; font-weight: bold; font-size: 18px; }
     .label { fill: #8b949e; font-weight: bold; }
+    
+    /* Terminal Line-by-Line Fade In */
+    .line { opacity: 0; animation: fade-in 0.8s forwards; }
+    .l1 { animation-delay: 0.3s; }
+    .l2 { animation-delay: 0.8s; }
+    .l3 { animation-delay: 1.3s; }
+    .l4 { animation-delay: 1.8s; }
+    .l5 { animation-delay: 2.3s; }
+    .l6 { animation-delay: 2.8s; }
+    .l7 { animation-delay: 3.3s; }
+    .l8 { animation-delay: 3.8s; }
+    
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateX(-5px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+
+    /* Animated Scanner Line */
     .scanner {
       width: 100%;
       height: 3px;
@@ -30,9 +56,9 @@
   <!-- Background -->
   <rect width="100%" height="100%" class="bg" rx="10" />
   
-  <!-- ASCII Art Face -->
+  <!-- ASCII Art Face with Glowing Effect -->
   <text x="20" y="30" class="ascii" xml:space="preserve">
-    <tspan x="20" dy="1.2em">                                                      -:.  .:::.</tspan>
+    <tspan x="20" dy="1.2em">                                                      -:.  .:::. </tspan>
     <tspan x="20" dy="1.2em">                                               .::::..::....  :. . .</tspan>
     <tspan x="20" dy="1.2em">                                              . ..:... . .   . ..    .</tspan>
     <tspan x="20" dy="1.2em">                                          :.:..-.</tspan>
@@ -64,16 +90,16 @@
     <tspan x="20" dy="1.2em">    *@##*##+++%++#++#+*#**#######*++*####+*****##++***##*######**##%****###*+#@%#+</tspan>
   </text>
 
-  <!-- Profile Details on Right -->
+  <!-- Profile Details Loading Line by Line -->
   <text x="570" y="100" class="details">
-    <tspan x="570" dy="0" class="title">Avishka Induwara</tspan>
-    <tspan x="570" dy="30"><tspan class="label">Brand:    </tspan> AVI</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Role:     </tspan> Full-Stack Developer</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Stack:    </tspan> Next.js, React, Tailwind</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Database: </tspan> Supabase, PostgreSQL</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Mobile:   </tspan> Flutter</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Current:  </tspan> Kurunduhami POS</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Location: </tspan> Sri Lanka</tspan>
+    <tspan x="570" dy="0" class="title line l1">Avishka Induwara Kumarasinghe</tspan>
+    <tspan x="570" dy="30" class="line l2"><tspan class="label">Brand:    </tspan> AVI</tspan>
+    <tspan x="570" dy="25" class="line l3"><tspan class="label">Role:     </tspan> Full-Stack Developer</tspan>
+    <tspan x="570" dy="25" class="line l4"><tspan class="label">Stack:    </tspan> Next.js, React, Tailwind</tspan>
+    <tspan x="570" dy="25" class="line l5"><tspan class="label">Database: </tspan> Supabase, PostgreSQL</tspan>
+    <tspan x="570" dy="25" class="line l6"><tspan class="label">Mobile:   </tspan> Flutter</tspan>
+    <tspan x="570" dy="25" class="line l7"><tspan class="label">Current:  </tspan> Kurunduhami POS</tspan>
+    <tspan x="570" dy="25" class="line l8"><tspan class="label">Location: </tspan> Sri Lanka</tspan>
   </text>
 
   <!-- Animated Scanner Line -->
