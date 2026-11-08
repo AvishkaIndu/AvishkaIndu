@@ -5,24 +5,42 @@
     .ascii {
       font-family: 'Courier New', Courier, monospace;
       font-size: 11px;
-      fill: #58a6ff; /* Base Blue Color */
     }
 
-    .details {
+    /* Cyberpunk ID Card Typography */
+    .brand { 
+      font-size: 38px; 
+      font-weight: 800; 
+      fill: #58a6ff; 
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      font-size: 15px;
-      fill: #c9d1d9;
+      letter-spacing: 3px;
     }
-    .title { fill: #58a6ff; font-weight: bold; font-size: 18px; }
-    .label { fill: #8b949e; font-weight: bold; }
+    .name { 
+      font-size: 14px; 
+      fill: #8b949e; 
+      font-family: 'Courier New', Courier, monospace; 
+      letter-spacing: 1px;
+    }
+    .label { 
+      fill: #79c0ff; 
+      font-weight: 600; 
+      font-family: 'Courier New', Courier, monospace; 
+      font-size: 15px; 
+    }
+    .value { 
+      fill: #c9d1d9; 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+    }
+    .icon { fill: #388bfd; font-weight: bold; font-family: 'Courier New', Courier, monospace; }
   </style>
   
   <!-- Background -->
   <rect width="100%" height="100%" class="bg" rx="10" />
   
-  <!-- ASCII Art Face with SVG Native Animation -->
+  <!-- Glowing ASCII Art Face -->
   <text x="20" y="30" class="ascii" xml:space="preserve">
-    <!-- Glowing Animation -->
+    <!-- SVG Native Glowing Animation -->
     <animate attributeName="opacity" values="0.6; 1; 0.6" dur="3s" repeatCount="indefinite" />
     <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="3s" repeatCount="indefinite" />
     
@@ -58,19 +76,39 @@
     <tspan x="20" dy="1.2em">    *@##*##+++%++#++#+*#**#######*++*####+*****##++***##*######**##%****###*+#@%#+</tspan>
   </text>
 
-  <!-- Profile Details (Always Visible) -->
-  <text x="570" y="100" class="details">
-    <tspan x="570" dy="0" class="title">Avishka Induwara Kumarasinghe</tspan>
-    <tspan x="570" dy="30"><tspan class="label">Brand:    </tspan> AVI</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Role:     </tspan> Full-Stack Developer</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Stack:    </tspan> Next.js, React, Tailwind</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Database: </tspan> Supabase, PostgreSQL</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Mobile:   </tspan> Flutter</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Current:  </tspan> Kurunduhami POS</tspan>
-    <tspan x="570" dy="25"><tspan class="label">Location: </tspan> Sri Lanka</tspan>
-  </text>
+  <!-- Center-Aligned Creative ID Card Layout with Adjusted Spacing (Moved to 560px) -->
+  <g transform="translate(560, 110)">
+    
+    <!-- Futuristic UI Accents -->
+    <path d="M -25 10 L -25 -15 L 0 -15" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
+    <!-- Bottom bracket extended further right for the longer university name -->
+    <path d="M 390 200 L 390 225 L 365 225" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
+    <line x1="-25" y1="15" x2="-25" y2="195" stroke="#388bfd" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 4" />
 
-  <!-- Animated Scanner Line with SVG Native Animation -->
+    <!-- Text Details -->
+    <text y="20">
+      <tspan x="0" dy="0" class="brand">AVZORA</tspan>
+      <tspan x="0" dy="25" class="name">AVISHKA INDUWARA KUMARASINGHE</tspan>
+
+      <tspan x="0" dy="50" class="icon">>_</tspan>
+      <tspan dx="10" class="label">ROLE      :</tspan>
+      <tspan dx="15" class="value">Full-Stack Developer</tspan>
+
+      <tspan x="0" dy="35" class="icon">>_</tspan>
+      <tspan dx="10" class="label">DEGREE    :</tspan>
+      <tspan dx="15" class="value">BICT (HONS)</tspan>
+
+      <tspan x="0" dy="35" class="icon">>_</tspan>
+      <tspan dx="10" class="label">UNIVERSITY:</tspan>
+      <tspan dx="15" class="value">University of Sri Jayewardenepura</tspan>
+
+      <tspan x="0" dy="35" class="icon">>_</tspan>
+      <tspan dx="10" class="label">LOCATION  :</tspan>
+      <tspan dx="15" class="value">Sri Lanka</tspan>
+    </text>
+  </g>
+
+  <!-- Animated Scanner Line -->
   <rect x="0" y="0" width="100%" height="3" fill="#58a6ff" opacity="0.6">
     <animateTransform attributeName="transform" type="translate" values="0 -10; 0 430; 0 -10" dur="3s" repeatCount="indefinite" />
   </rect>
