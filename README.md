@@ -1,1 +1,1 @@
-<img src="profile.svg?v=4" width="100%">
+<img src="avzora.svg" width="100%">
