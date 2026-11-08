@@ -1,1 +1,1 @@
-<img src="avzora1.svg" width="100%">
+<img src="avzora.svg" width="100%">
