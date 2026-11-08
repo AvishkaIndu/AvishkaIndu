@@ -1,61 +1,135 @@
-<svg width="950" height="340" viewBox="0 0 950 340" xmlns="http://www.w3.org/2000/svg">
+<svg width="950" height="430" viewBox="0 0 950 430" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg { fill: #0d1117; }
-    .icon { font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 17px; }
-    .category { fill: #79c0ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: 700; letter-spacing: 1px; }
-    .colon { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: bold; }
-    .tech { fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; letter-spacing: 0.5px; }
-    .sep { fill: #388bfd; font-weight: bold; opacity: 0.6; }
-    .title { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold; letter-spacing: 2px; }
+    
+    /* Typography */
+    .title { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold; letter-spacing: 2px; text-anchor: middle; }
+    .folder { fill: #79c0ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: 800; letter-spacing: 1px; }
+    .file { fill: #c9d1d9; font-family: 'Courier New', Courier, monospace; font-size: 15px; font-weight: 600; }
+    
+    /* Cyber Tree Lines */
+    .trunk { fill: none; stroke: #1f6feb; stroke-width: 2; opacity: 0.6; }
+    .branch { fill: none; stroke: #388bfd; stroke-width: 1.5; opacity: 0.4; }
+    
+    /* Animated Nodes */
+    .node-core { fill: #58a6ff; }
+    .node-folder { fill: #79c0ff; }
   </style>
   
+  <!-- Background -->
   <rect width="100%" height="100%" class="bg" rx="10" />
 
-  <g transform="translate(40, 50)">
-    <text x="0" y="0" class="title">~/AVZORA/TECH_ARSENAL <tspan fill="#79c0ff">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
-    <rect x="0" y="15" width="870" height="1" fill="#1f6feb" opacity="0.3" />
-    <rect x="0" y="15" width="0" height="2" fill="#58a6ff">
-      <animate attributeName="width" values="0; 870; 0" dur="4s" repeatCount="indefinite" />
-    </rect>
-  </g>
+  <!-- ================= ROOT HEADER ================= -->
+  <text x="475" y="40" class="title">./AVZORA/SYSTEM_ARSENAL.sh <tspan fill="#79c0ff">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
+  
+  <!-- Main Data Trunks (Left and Right Split) -->
+  <path d="M 475 50 L 475 65 L 50 65 L 50 270" class="trunk" />
+  <path d="M 475 65 L 500 65 L 500 235" class="trunk" />
+  
+  <!-- Central Node -->
+  <circle cx="475" cy="65" r="4" class="node-core">
+    <animate attributeName="r" values="3.5; 5.5; 3.5" dur="2s" repeatCount="indefinite" />
+  </circle>
 
-  <path d="M 40 90 L 25 90 L 25 110" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
-  <path d="M 895 295 L 910 295 L 910 275" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
-  <line x1="25" y1="115" x2="25" y2="290" stroke="#388bfd" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 4" />
+  <!-- ================= LEFT COLUMN ================= -->
+  
+  <!-- 1. FRONTEND DIRECTORY -->
+  <circle cx="50" cy="95" r="3" class="node-folder" />
+  <path d="M 50 95 L 75 95" class="trunk" />
+  <text x="85" y="100" class="folder">/FRONTEND</text>
+  
+  <!-- Frontend Files -->
+  <path d="M 90 110 L 90 220" class="branch" />
+  
+  <path d="M 90 120 L 110 120" class="branch" />
+  <text x="120" y="125" class="file">Next.js</text>
+  
+  <path d="M 90 145 L 110 145" class="branch" />
+  <text x="120" y="150" class="file">React</text>
+  
+  <path d="M 90 170 L 110 170" class="branch" />
+  <text x="120" y="175" class="file">TypeScript</text>
+  
+  <path d="M 90 195 L 110 195" class="branch" />
+  <text x="120" y="200" class="file">Tailwind CSS</text>
+  
+  <path d="M 90 220 L 110 220" class="branch" />
+  <text x="120" y="225" class="file">HTML & CSS</text>
 
-  <g transform="translate(50, 120)">
-    <text x="0" class="icon" fill="#388bfd">>_
-      <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2s" repeatCount="indefinite" />
-    </text>
-    <text x="35" class="category">FRONTEND</text>
-    <text x="175" class="colon">:</text>
-    <text x="200" class="tech">Next.js <tspan class="sep"> //</tspan> React <tspan class="sep"> //</tspan> TypeScript <tspan class="sep"> //</tspan> Tailwind CSS <tspan class="sep"> //</tspan> HTML and CSS</text>
-  </g>
+  <!-- 2. DATABASE DIRECTORY -->
+  <circle cx="50" cy="270" r="3" class="node-folder" />
+  <path d="M 50 270 L 75 270" class="trunk" />
+  <text x="85" y="275" class="folder">/DATABASE</text>
+  
+  <!-- Database Files -->
+  <path d="M 90 285 L 90 370" class="branch" />
+  
+  <path d="M 90 295 L 110 295" class="branch" />
+  <text x="120" y="300" class="file">Supabase</text>
+  
+  <path d="M 90 320 L 110 320" class="branch" />
+  <text x="120" y="325" class="file">Firebase</text>
+  
+  <path d="M 90 345 L 110 345" class="branch" />
+  <text x="120" y="350" class="file">PostgreSQL</text>
+  
+  <path d="M 90 370 L 110 370" class="branch" />
+  <text x="120" y="375" class="file">MongoDB</text>
 
-  <g transform="translate(50, 175)">
-    <text x="0" class="icon" fill="#388bfd">>_
-      <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.5s" repeatCount="indefinite" />
-    </text>
-    <text x="35" class="category">BACKEND</text>
-    <text x="175" class="colon">:</text>
-    <text x="200" class="tech">Node.js <tspan class="sep"> //</tspan> .NET <tspan class="sep"> //</tspan> Express.js <tspan class="sep"> //</tspan> Python</text>
-  </g>
 
-  <g transform="translate(50, 230)">
-    <text x="0" class="icon" fill="#388bfd">>_
-      <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.2s" repeatCount="indefinite" />
-    </text>
-    <text x="35" class="category">DATABASE</text>
-    <text x="175" class="colon">:</text>
-    <text x="200" class="tech">Supabase <tspan class="sep"> //</tspan> Firebase <tspan class="sep"> //</tspan> PostgreSQL <tspan class="sep"> //</tspan> MongoDB</text>
-  </g>
+  <!-- ================= RIGHT COLUMN ================= -->
+  
+  <!-- 3. BACKEND DIRECTORY -->
+  <circle cx="500" cy="95" r="3" class="node-folder" />
+  <path d="M 500 95 L 525 95" class="trunk" />
+  <text x="535" y="100" class="folder">/BACKEND</text>
+  
+  <!-- Backend Files -->
+  <path d="M 540 110 L 540 195" class="branch" />
+  
+  <path d="M 540 120 L 560 120" class="branch" />
+  <text x="570" y="125" class="file">Node.js</text>
+  
+  <path d="M 540 145 L 560 145" class="branch" />
+  <text x="570" y="150" class="file">.NET</text>
+  
+  <path d="M 540 170 L 560 170" class="branch" />
+  <text x="570" y="175" class="file">Express.js</text>
+  
+  <path d="M 540 195 L 560 195" class="branch" />
+  <text x="570" y="200" class="file">Python</text>
 
-  <g transform="translate(50, 285)">
-    <text x="0" class="icon" fill="#388bfd">>_
-      <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.8s" repeatCount="indefinite" />
-    </text>
-    <text x="35" class="category">CLOUD_DEPLOY</text>
-    <text x="175" class="colon">:</text>
-    <text x="200" class="tech">AWS <tspan class="sep"> //</tspan> Vercel <tspan class="sep"> //</tspan> Docker <tspan class="sep"> //</tspan> Netlify <tspan class="sep"> //</tspan> GitHub Actions <tspan class="sep"> //</tspan> Linux</text>
-  </g>
+  <!-- 4. CLOUD_DEPLOY DIRECTORY -->
+  <circle cx="500" cy="235" r="3" class="node-folder" />
+  <path d="M 500 235 L 525 235" class="trunk" />
+  <text x="535" y="240" class="folder">/CLOUD_DEPLOY</text>
+  
+  <!-- Cloud & Deploy Files -->
+  <path d="M 540 250 L 540 375" class="branch" />
+  
+  <path d="M 540 250 L 560 250" class="branch" />
+  <text x="570" y="255" class="file">AWS</text>
+  
+  <path d="M 540 275 L 560 275" class="branch" />
+  <text x="570" y="280" class="file">Vercel</text>
+  
+  <path d="M 540 300 L 560 300" class="branch" />
+  <text x="570" y="305" class="file">Docker</text>
+  
+  <path d="M 540 325 L 560 325" class="branch" />
+  <text x="570" y="330" class="file">Netlify</text>
+
+  <path d="M 540 350 L 560 350" class="branch" />
+  <text x="570" y="355" class="file">GitHub Actions</text>
+
+  <path d="M 540 375 L 560 375" class="branch" />
+  <text x="570" y="380" class="file">Linux</text>
+
+  <!-- Animated Glowing Highlights on Lines -->
+  <circle cx="50" cy="270" r="2" fill="#58a6ff" opacity="0.8">
+    <animate attributeName="cy" values="65; 270; 65" dur="5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="500" cy="235" r="2" fill="#58a6ff" opacity="0.8">
+    <animate attributeName="cy" values="65; 235; 65" dur="4s" repeatCount="indefinite" />
+  </circle>
 </svg>
