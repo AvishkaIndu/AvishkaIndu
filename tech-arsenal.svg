@@ -1,28 +1,25 @@
 <svg width="950" height="430" viewBox="0 0 950 430" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg { fill: #0d1117; }
-    
-    /* Typography */
     .title { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold; letter-spacing: 2px; text-anchor: middle; }
     .folder { fill: #79c0ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: 800; letter-spacing: 1px; }
     .file { fill: #c9d1d9; font-family: 'Courier New', Courier, monospace; font-size: 15px; font-weight: 600; }
-    
-    /* Cyber Tree Lines */
     .trunk { fill: none; stroke: #1f6feb; stroke-width: 2; opacity: 0.6; }
     .branch { fill: none; stroke: #388bfd; stroke-width: 1.5; opacity: 0.4; }
-    
-    /* Animated Nodes */
     .node-core { fill: #58a6ff; }
     .node-folder { fill: #79c0ff; }
   </style>
   
-  <!-- Background -->
   <rect width="100%" height="100%" class="bg" rx="10" />
 
   <!-- ================= ROOT HEADER ================= -->
-  <text x="475" y="40" class="title">./AVZORA/SYSTEM_ARSENAL.sh <tspan fill="#79c0ff">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
+  <text x="470" y="40" class="title">./AVZORA/SYSTEM_ARSENAL.sh</text>
+  <!-- Blinking Cursor safe for GitHub -->
+  <rect x="620" y="27" width="10" height="15" fill="#79c0ff">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+  </rect>
   
-  <!-- Main Data Trunks (Left and Right Split) -->
+  <!-- Main Data Trunks -->
   <path d="M 475 50 L 475 65 L 50 65 L 50 270" class="trunk" />
   <path d="M 475 65 L 500 65 L 500 235" class="trunk" />
   
@@ -32,13 +29,10 @@
   </circle>
 
   <!-- ================= LEFT COLUMN ================= -->
-  
-  <!-- 1. FRONTEND DIRECTORY -->
   <circle cx="50" cy="95" r="3" class="node-folder" />
   <path d="M 50 95 L 75 95" class="trunk" />
   <text x="85" y="100" class="folder">/FRONTEND</text>
   
-  <!-- Frontend Files -->
   <path d="M 90 110 L 90 220" class="branch" />
   
   <path d="M 90 120 L 110 120" class="branch" />
@@ -54,14 +48,13 @@
   <text x="120" y="200" class="file">Tailwind CSS</text>
   
   <path d="M 90 220 L 110 220" class="branch" />
-  <text x="120" y="225" class="file">HTML & CSS</text>
+  <text x="120" y="225" class="file">HTML and CSS</text>
 
-  <!-- 2. DATABASE DIRECTORY -->
+  <!-- DATABASE DIRECTORY -->
   <circle cx="50" cy="270" r="3" class="node-folder" />
   <path d="M 50 270 L 75 270" class="trunk" />
   <text x="85" y="275" class="folder">/DATABASE</text>
   
-  <!-- Database Files -->
   <path d="M 90 285 L 90 370" class="branch" />
   
   <path d="M 90 295 L 110 295" class="branch" />
@@ -76,15 +69,11 @@
   <path d="M 90 370 L 110 370" class="branch" />
   <text x="120" y="375" class="file">MongoDB</text>
 
-
   <!-- ================= RIGHT COLUMN ================= -->
-  
-  <!-- 3. BACKEND DIRECTORY -->
   <circle cx="500" cy="95" r="3" class="node-folder" />
   <path d="M 500 95 L 525 95" class="trunk" />
   <text x="535" y="100" class="folder">/BACKEND</text>
   
-  <!-- Backend Files -->
   <path d="M 540 110 L 540 195" class="branch" />
   
   <path d="M 540 120 L 560 120" class="branch" />
@@ -99,12 +88,11 @@
   <path d="M 540 195 L 560 195" class="branch" />
   <text x="570" y="200" class="file">Python</text>
 
-  <!-- 4. CLOUD_DEPLOY DIRECTORY -->
+  <!-- CLOUD_DEPLOY DIRECTORY -->
   <circle cx="500" cy="235" r="3" class="node-folder" />
   <path d="M 500 235 L 525 235" class="trunk" />
   <text x="535" y="240" class="folder">/CLOUD_DEPLOY</text>
   
-  <!-- Cloud & Deploy Files -->
   <path d="M 540 250 L 540 375" class="branch" />
   
   <path d="M 540 250 L 560 250" class="branch" />
