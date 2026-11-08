@@ -9,38 +9,29 @@
     .title { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold; letter-spacing: 2px; }
   </style>
   
-  <!-- Solid Background -->
   <rect width="100%" height="100%" class="bg" rx="10" />
 
-  <!-- Header -->
   <g transform="translate(40, 50)">
     <text x="0" y="0" class="title">~/AVZORA/TECH_ARSENAL <tspan fill="#79c0ff">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
-    
-    <!-- Animated Loading Line -->
     <rect x="0" y="15" width="870" height="1" fill="#1f6feb" opacity="0.3" />
     <rect x="0" y="15" width="0" height="2" fill="#58a6ff">
       <animate attributeName="width" values="0; 870; 0" dur="4s" repeatCount="indefinite" />
     </rect>
   </g>
 
-  <!-- Futuristic Corner Brackets -->
   <path d="M 40 90 L 25 90 L 25 110" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
   <path d="M 895 295 L 910 295 L 910 275" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
   <line x1="25" y1="115" x2="25" y2="290" stroke="#388bfd" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 4" />
 
-  <!-- Tech Stack List -->
-  
-  <!-- Frontend -->
   <g transform="translate(50, 120)">
     <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2s" repeatCount="indefinite" />
     </text>
     <text x="35" class="category">FRONTEND</text>
     <text x="175" class="colon">:</text>
-    <text x="200" class="tech">Next.js <tspan class="sep"> //</tspan> React <tspan class="sep"> //</tspan> TypeScript <tspan class="sep"> //</tspan> Tailwind CSS <tspan class="sep"> //</tspan> HTML & CSS</text>
+    <text x="200" class="tech">Next.js <tspan class="sep"> //</tspan> React <tspan class="sep"> //</tspan> TypeScript <tspan class="sep"> //</tspan> Tailwind CSS <tspan class="sep"> //</tspan> HTML and CSS</text>
   </g>
 
-  <!-- Backend -->
   <g transform="translate(50, 175)">
     <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.5s" repeatCount="indefinite" />
@@ -50,7 +41,6 @@
     <text x="200" class="tech">Node.js <tspan class="sep"> //</tspan> .NET <tspan class="sep"> //</tspan> Express.js <tspan class="sep"> //</tspan> Python</text>
   </g>
 
-  <!-- Database -->
   <g transform="translate(50, 230)">
     <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.2s" repeatCount="indefinite" />
@@ -60,7 +50,6 @@
     <text x="200" class="tech">Supabase <tspan class="sep"> //</tspan> Firebase <tspan class="sep"> //</tspan> PostgreSQL <tspan class="sep"> //</tspan> MongoDB</text>
   </g>
 
-  <!-- Cloud & Deploy -->
   <g transform="translate(50, 285)">
     <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.8s" repeatCount="indefinite" />
