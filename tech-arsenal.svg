@@ -1,29 +1,22 @@
 <svg width="950" height="340" viewBox="0 0 950 340" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg { fill: #0d1117; }
-    
-    /* Typography matching main AVZORA profile */
     .icon { font-family: 'Courier New', Courier, monospace; font-weight: bold; font-size: 17px; }
     .category { fill: #79c0ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: 700; letter-spacing: 1px; }
     .colon { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: bold; }
-    
     .tech { fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; letter-spacing: 0.5px; }
     .sep { fill: #388bfd; font-weight: bold; opacity: 0.6; }
-    
     .title { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 18px; font-weight: bold; letter-spacing: 2px; }
   </style>
   
-  <!-- Solid Background (No grids, no boxes) -->
+  <!-- Solid Background -->
   <rect width="100%" height="100%" class="bg" rx="10" />
 
   <!-- Header -->
   <g transform="translate(40, 50)">
-    <text x="0" y="0" class="title">~/AVZORA/TECH_ARSENAL <tspan fill="#79c0ff">█
-      <!-- Native SVG Blinking Animation (Works perfectly on GitHub) -->
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
-    </tspan></text>
+    <text x="0" y="0" class="title">~/AVZORA/TECH_ARSENAL <tspan fill="#79c0ff">█<animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" /></tspan></text>
     
-    <!-- Animated Loading Line underneath title -->
+    <!-- Animated Loading Line -->
     <rect x="0" y="15" width="870" height="1" fill="#1f6feb" opacity="0.3" />
     <rect x="0" y="15" width="0" height="2" fill="#58a6ff">
       <animate attributeName="width" values="0; 870; 0" dur="4s" repeatCount="indefinite" />
@@ -39,53 +32,41 @@
   
   <!-- Frontend -->
   <g transform="translate(50, 120)">
-    <text x="0" class="icon" fill="#388bfd">
-      >_
+    <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2s" repeatCount="indefinite" />
     </text>
     <text x="35" class="category">FRONTEND</text>
     <text x="175" class="colon">:</text>
-    <text x="200" class="tech">
-      Next.js <tspan class="sep"> //</tspan> React <tspan class="sep"> //</tspan> TypeScript <tspan class="sep"> //</tspan> Tailwind CSS <tspan class="sep"> //</tspan> HTML & CSS
-    </text>
+    <text x="200" class="tech">Next.js <tspan class="sep"> //</tspan> React <tspan class="sep"> //</tspan> TypeScript <tspan class="sep"> //</tspan> Tailwind CSS <tspan class="sep"> //</tspan> HTML & CSS</text>
   </g>
 
   <!-- Backend -->
   <g transform="translate(50, 175)">
-    <text x="0" class="icon" fill="#388bfd">
-      >_
+    <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.5s" repeatCount="indefinite" />
     </text>
     <text x="35" class="category">BACKEND</text>
     <text x="175" class="colon">:</text>
-    <text x="200" class="tech">
-      Node.js <tspan class="sep"> //</tspan> .NET <tspan class="sep"> //</tspan> Express.js <tspan class="sep"> //</tspan> Python
-    </text>
+    <text x="200" class="tech">Node.js <tspan class="sep"> //</tspan> .NET <tspan class="sep"> //</tspan> Express.js <tspan class="sep"> //</tspan> Python</text>
   </g>
 
   <!-- Database -->
   <g transform="translate(50, 230)">
-    <text x="0" class="icon" fill="#388bfd">
-      >_
+    <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.2s" repeatCount="indefinite" />
     </text>
     <text x="35" class="category">DATABASE</text>
     <text x="175" class="colon">:</text>
-    <text x="200" class="tech">
-      Supabase <tspan class="sep"> //</tspan> Firebase <tspan class="sep"> //</tspan> PostgreSQL <tspan class="sep"> //</tspan> MongoDB
-    </text>
+    <text x="200" class="tech">Supabase <tspan class="sep"> //</tspan> Firebase <tspan class="sep"> //</tspan> PostgreSQL <tspan class="sep"> //</tspan> MongoDB</text>
   </g>
 
   <!-- Cloud & Deploy -->
   <g transform="translate(50, 285)">
-    <text x="0" class="icon" fill="#388bfd">
-      >_
+    <text x="0" class="icon" fill="#388bfd">>_
       <animate attributeName="fill" values="#388bfd; #79c0ff; #388bfd" dur="2.8s" repeatCount="indefinite" />
     </text>
     <text x="35" class="category">CLOUD_DEPLOY</text>
     <text x="175" class="colon">:</text>
-    <text x="200" class="tech">
-      AWS <tspan class="sep"> //</tspan> Vercel <tspan class="sep"> //</tspan> Docker <tspan class="sep"> //</tspan> Netlify <tspan class="sep"> //</tspan> GitHub Actions <tspan class="sep"> //</tspan> Linux
-    </text>
+    <text x="200" class="tech">AWS <tspan class="sep"> //</tspan> Vercel <tspan class="sep"> //</tspan> Docker <tspan class="sep"> //</tspan> Netlify <tspan class="sep"> //</tspan> GitHub Actions <tspan class="sep"> //</tspan> Linux</text>
   </g>
 </svg>
