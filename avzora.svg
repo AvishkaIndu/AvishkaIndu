@@ -76,12 +76,11 @@
     <tspan x="20" dy="1.2em">    *@##*##+++%++#++#+*#**#######*++*####+*****##++***##*######**##%****###*+#@%#+</tspan>
   </text>
 
-  <!-- Center-Aligned Creative ID Card Layout - Y position moved down to 145 -->
+  <!-- Center-Aligned Creative ID Card Layout with Perfect Tabular Alignment -->
   <g transform="translate(560, 145)">
     
     <!-- Futuristic UI Accents -->
     <path d="M -25 10 L -25 -15 L 0 -15" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
-    <!-- Bottom bracket -->
     <path d="M 390 200 L 390 225 L 365 225" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
     <line x1="-25" y1="15" x2="-25" y2="195" stroke="#388bfd" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 4" />
 
@@ -90,21 +89,29 @@
       <tspan x="0" dy="0" class="brand">AVZORA</tspan>
       <tspan x="0" dy="25" class="name">AVISHKA INDUWARA KUMARASINGHE</tspan>
 
+      <!-- Row 1 -->
       <tspan x="0" dy="50" class="icon">>_</tspan>
-      <tspan dx="10" class="label">ROLE      :</tspan>
-      <tspan dx="15" class="value">Full-Stack Developer</tspan>
+      <tspan x="30" class="label">ROLE</tspan>
+      <tspan x="130" class="label">:</tspan>
+      <tspan x="150" class="value">Full-Stack Developer</tspan>
 
+      <!-- Row 2 -->
       <tspan x="0" dy="35" class="icon">>_</tspan>
-      <tspan dx="10" class="label">DEGREE    :</tspan>
-      <tspan dx="15" class="value">BICT (HONS)</tspan>
+      <tspan x="30" class="label">DEGREE</tspan>
+      <tspan x="130" class="label">:</tspan>
+      <tspan x="150" class="value">BICT (HONS)</tspan>
 
+      <!-- Row 3 -->
       <tspan x="0" dy="35" class="icon">>_</tspan>
-      <tspan dx="10" class="label">UNIVERSITY:</tspan>
-      <tspan dx="15" class="value">University of Sri Jayewardenepura</tspan>
+      <tspan x="30" class="label">UNIVERSITY</tspan>
+      <tspan x="130" class="label">:</tspan>
+      <tspan x="150" class="value">University of Sri Jayewardenepura</tspan>
 
+      <!-- Row 4 -->
       <tspan x="0" dy="35" class="icon">>_</tspan>
-      <tspan dx="10" class="label">LOCATION  :</tspan>
-      <tspan dx="15" class="value">Sri Lanka</tspan>
+      <tspan x="30" class="label">LOCATION</tspan>
+      <tspan x="130" class="label">:</tspan>
+      <tspan x="150" class="value">Sri Lanka</tspan>
     </text>
   </g>
 
