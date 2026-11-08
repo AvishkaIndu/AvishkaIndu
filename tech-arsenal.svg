@@ -1,0 +1,127 @@
+<svg width="950" height="350" viewBox="0 0 950 350" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    /* Background matching main theme */
+    .bg { fill: #0d1117; }
+    
+    /* Typography */
+    .title-text { font-family: 'Courier New', Courier, monospace; font-size: 20px; font-weight: bold; letter-spacing: 2px; }
+    
+    /* Glitch Animation Classes */
+    .glitch-red { fill: #ff3e3e; mix-blend-mode: screen; opacity: 0; }
+    .glitch-blue { fill: #58a6ff; mix-blend-mode: screen; opacity: 0; }
+    .main-text { fill: #58a6ff; }
+
+    .category { fill: #79c0ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: 700; letter-spacing: 1px; }
+    .colon { fill: #58a6ff; font-family: 'Courier New', Courier, monospace; font-size: 16px; font-weight: bold; }
+    
+    .tech { fill: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; letter-spacing: 0.5px; }
+    .sep { fill: #388bfd; font-weight: bold; opacity: 0.6; }
+    
+    /* Blinking Terminal Cursor */
+    .blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+    /* Flowing Data Line */
+    @keyframes dashFlow { to { stroke-dashoffset: -30; } }
+    .flow-line {
+      stroke: #388bfd; stroke-width: 1.5; stroke-dasharray: 5 10;
+      animation: dashFlow 1.5s linear infinite; opacity: 0.5;
+    }
+
+    /* Server LED Pulses */
+    @keyframes pulseLed {
+      0% { fill: #388bfd; r: 3; opacity: 0.4; }
+      50% { fill: #79c0ff; r: 4.5; opacity: 1; filter: drop-shadow(0 0 4px #58a6ff); }
+      100% { fill: #388bfd; r: 3; opacity: 0.4; }
+    }
+    .led { animation: pulseLed 2s infinite; }
+    .led-d1 { animation: pulseLed 2s infinite 0.5s; }
+    .led-d2 { animation: pulseLed 2s infinite 1s; }
+    .led-d3 { animation: pulseLed 2s infinite 1.5s; }
+
+    /* Minimalist Rotating Cog */
+    @keyframes spin { 100% { transform: rotate(360deg); } }
+    .cog { transform-origin: 880px 60px; animation: spin 15s linear infinite; }
+    .cog-reverse { transform-origin: 880px 60px; animation: spin 20s linear infinite reverse; }
+  </style>
+  
+  <!-- Solid Background (No grids, no boxes) -->
+  <rect width="100%" height="100%" class="bg" rx="10" />
+
+  <!-- Top Header with Glitch Effect & Flowing Line -->
+  <g transform="translate(45, 65)">
+    <!-- Red Glitch Layer -->
+    <text x="0" y="0" class="title-text glitch-red">
+      ~/AVZORA/TECH_ARSENAL
+      <animate attributeName="opacity" values="0; 0; 0.8; 0; 0; 0" dur="4s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; -2,1; 0,0; 0,0" dur="4s" repeatCount="indefinite" />
+    </text>
+    <!-- Cyan Glitch Layer -->
+    <text x="0" y="0" class="title-text glitch-blue">
+      ~/AVZORA/TECH_ARSENAL
+      <animate attributeName="opacity" values="0; 0; 0; 0.8; 0; 0" dur="4s" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="0,0; 0,0; 2,-1; 0,0" dur="4s" repeatCount="indefinite" />
+    </text>
+    <!-- Main Stable Text -->
+    <text x="0" y="0" class="title-text main-text">~/AVZORA/TECH_ARSENAL <tspan class="blink" fill="#79c0ff">█</tspan></text>
+    
+    <!-- Animated Data Flowing Line -->
+    <line x1="0" y1="18" x2="790" y2="18" class="flow-line" />
+  </g>
+
+  <!-- Minimalist Cyber-Cog Animation (Top Right) -->
+  <g opacity="0.7">
+    <circle cx="880" cy="60" r="22" fill="none" stroke="#388bfd" stroke-width="1.5" stroke-dasharray="4 8" class="cog" />
+    <circle cx="880" cy="60" r="16" fill="none" stroke="#58a6ff" stroke-width="2" stroke-dasharray="15 5 5 5" class="cog-reverse" />
+    <circle cx="880" cy="60" r="4" fill="#79c0ff" opacity="0.9">
+      <animate attributeName="opacity" values="0.4; 1; 0.4" dur="2s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Futuristic Corner Brackets -->
+  <path d="M 45 105 L 30 105 L 30 125" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
+  <path d="M 905 305 L 920 305 L 920 285" fill="none" stroke="#58a6ff" stroke-width="2" opacity="0.8" />
+  <line x1="30" y1="130" x2="30" y2="300" stroke="#388bfd" stroke-width="1.5" opacity="0.3" stroke-dasharray="3 5" />
+
+  <!-- ================= TECH STACK LIST ================= -->
+  
+  <!-- Frontend -->
+  <g transform="translate(65, 135)">
+    <circle cx="0" cy="-5" r="3" class="led" />
+    <text x="25" class="category">FRONTEND</text>
+    <text x="165" class="colon">:</text>
+    <text x="190" class="tech">
+      Next.js <tspan class="sep"> //</tspan> React <tspan class="sep"> //</tspan> TypeScript <tspan class="sep"> //</tspan> Tailwind CSS <tspan class="sep"> //</tspan> HTML & CSS
+    </text>
+  </g>
+
+  <!-- Backend -->
+  <g transform="translate(65, 190)">
+    <circle cx="0" cy="-5" r="3" class="led led-d1" />
+    <text x="25" class="category">BACKEND</text>
+    <text x="165" class="colon">:</text>
+    <text x="190" class="tech">
+      Node.js <tspan class="sep"> //</tspan> .NET <tspan class="sep"> //</tspan> Express.js <tspan class="sep"> //</tspan> Python
+    </text>
+  </g>
+
+  <!-- Database -->
+  <g transform="translate(65, 245)">
+    <circle cx="0" cy="-5" r="3" class="led led-d2" />
+    <text x="25" class="category">DATABASE</text>
+    <text x="165" class="colon">:</text>
+    <text x="190" class="tech">
+      Supabase <tspan class="sep"> //</tspan> Firebase <tspan class="sep"> //</tspan> PostgreSQL <tspan class="sep"> //</tspan> MongoDB
+    </text>
+  </g>
+
+  <!-- Cloud & Deploy -->
+  <g transform="translate(65, 300)">
+    <circle cx="0" cy="-5" r="3" class="led led-d3" />
+    <text x="25" class="category">CLOUD_DEPLOY</text>
+    <text x="165" class="colon">:</text>
+    <text x="190" class="tech">
+      AWS <tspan class="sep"> //</tspan> Vercel <tspan class="sep"> //</tspan> Docker <tspan class="sep"> //</tspan> Netlify <tspan class="sep"> //</tspan> GitHub Actions <tspan class="sep"> //</tspan> Linux
+    </text>
+  </g>
+</svg>
