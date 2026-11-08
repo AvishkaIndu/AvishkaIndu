@@ -1,1 +1,1 @@
-<img src="profile.svg?v=1" width="100%">
+<img src="profile.svg?v=4" width="100%">
